@@ -1,6 +1,6 @@
 <p align="center">
   <a title="DBM POLSKA" href="https://discord.gg/9HYB4n3Dz4" target="_blank">
-    <img src="https://media.discordapp.net/attachments/1301409004248891443/1365706954949001358/DBM_POLSKA_v2.png?ex=680e4937&is=680cf7b7&hm=710e4902a384181979ab3c854d21cd21037103252c7bf322d6ae0749a17e9a93&=&format=webp&quality=lossless&width=961&height=939" width="400" alt="DBM POLSKA" />
+    <img src="https://media.discordapp.net/attachments/1301409004248891443/1365706954949001358/DBM_POLSKA_v2.png?ex=680e4937&is=680cf7b7&hm=710e4902a384181979ab3c854d21cd21037103252c7bf322d6ae0749a17e9a93&=&format=webp&quality=lossless&width=961&height=939" width="300" alt="DBM POLSKA" />
   </a>
 </p>
 
