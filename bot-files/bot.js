@@ -1284,7 +1284,7 @@ Bot.onSelectMenuInteraction = function (interaction) {
     );
   } else {
     const response = Actions.getInvalidSelectResponseText();
-    if (!interactionId.includes("msg-button-")) return;
+    if (!interactionId.includes("msg-select-")) return;
     if (response) {
       interaction.reply({ content: response, flags: 64 });
     }
