@@ -15,7 +15,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/DBM-POLSKA/DBM-14)](https://github.com/DBM-POLSKA/DBM-14)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DBM-POLSKA/DBM-14)](https://github.com/DBM-POLSKA/DBM-14)
 
-[DBM POLSKA](https://discord.gg/9HYB4n3Dz4) to projekt open source kierowany przez społeczność, którego celem jest modyfikowanie, rozszerzanie i ulepszanie [Discord Bot Maker](https://store.steampowered.com/app/682130/Discord_Bot_Maker/).
+[DBM POLSKA](https://discord.gg/9HYB4n3Dz4) is a community-driven open source project whose goal is to modify, extend, and improve [Discord Bot Maker](https://store.steampowered.com/app/682130/Discord_Bot_Maker/).
 
 # Pobieranie
 
