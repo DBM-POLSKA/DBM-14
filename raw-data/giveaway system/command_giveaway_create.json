@@ -1,0 +1,270 @@
+{
+  "name": "giveaway create",
+  "permissions": "ADMINISTRATOR",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "bXuus",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Giveaway is being created!**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "dontReply": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "message1",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server_name",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "server_icon",
+      "name": "Store Server Info"
+    },
+    {
+      "message": "1",
+      "varName": "message1",
+      "info": "1",
+      "storage": "1",
+      "varName2": "message_id",
+      "name": "Store Message Info"
+    },
+    {
+      "time": "${slashParams(\"time\")}",
+      "winners": "${slashParams(\"winners\")}",
+      "prize": "${slashParams(\"prize\")}",
+      "msgid": "${tempVars(\"message_id\")}",
+      "description": "${slashParams(\"description\")}",
+      "storage": "1",
+      "varName": "giveaway_id",
+      "name": "Giveaway Create"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "host",
+      "storage": "1",
+      "varName": "host",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "endRelative",
+      "storage": "1",
+      "varName": "end_time",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "description",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "description",
+      "name": "Giveaway Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "🎉",
+          "type": "3",
+          "id": "msg-button-ab712c4",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "sourceGiveaway": "current",
+              "giveawayId": "",
+              "info": "id",
+              "noParticipantsText": "No Participants",
+              "noWinnersYetText": "No Winners Yet",
+              "noWinnersText": "No Winners",
+              "noDescriptionText": "No Description",
+              "endedStatus1Text": "🟢",
+              "endedStatus2Text": "🔴",
+              "storage": "1",
+              "varName": "G_ID",
+              "name": "Giveaway Info"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "giveawayId": "${tempVars(\"G_ID\")}",
+              "branch": {
+                "iftrue": "99",
+                "iffalse": "99",
+                "iftrueActions": [
+                  {
+                    "member": "1",
+                    "varName": "",
+                    "giveawayid": "${tempVars(\"G_ID\")}",
+                    "name": "Giveaway Leave"
+                  },
+                  {
+                    "channel": "0",
+                    "varName": "",
+                    "message": "You have successfully exited the giveaway!",
+                    "buttons": [],
+                    "selectMenus": [],
+                    "attachments": [],
+                    "embeds": [],
+                    "reply": true,
+                    "ephemeral": true,
+                    "dontReply": false,
+                    "tts": false,
+                    "overwrite": false,
+                    "dontSend": false,
+                    "editMessage": "0",
+                    "editMessageVarName": "",
+                    "storage": "0",
+                    "varName2": "",
+                    "name": "Send Message"
+                  }
+                ],
+                "iffalseActions": [
+                  {
+                    "member": "1",
+                    "varName": "",
+                    "giveawayid": "${tempVars(\"G_ID\")}",
+                    "name": "Giveaway Join"
+                  },
+                  {
+                    "channel": "0",
+                    "varName": "",
+                    "message": "You have successfully joined the giveaway!",
+                    "buttons": [],
+                    "selectMenus": [],
+                    "attachments": [],
+                    "embeds": [],
+                    "reply": true,
+                    "ephemeral": true,
+                    "dontReply": false,
+                    "tts": false,
+                    "overwrite": false,
+                    "dontSend": false,
+                    "editMessage": "0",
+                    "editMessageVarName": "",
+                    "storage": "0",
+                    "varName2": "",
+                    "name": "Send Message"
+                  }
+                ]
+              },
+              "name": "Giveaway Check If Member"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${slashParams(\"prize\")}",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "> **Host:** ${tempVars(\"host\")}\n> **End:** ${tempVars(\"end_time\")}\n> **Description:** ${tempVars(\"description\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"server_name\")}",
+          "footerIconUrl": "${tempVars(\"server_icon\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "dontReply": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "intUpdate",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "time",
+      "description": "1s / 1m / 1h / 1d / 1M / 1Y",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "winners",
+      "description": "How many people are expected to win.",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "prize",
+      "description": "What will the reward be?",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "description",
+      "description": "Can you describe the giveaway.",
+      "type": "STRING",
+      "required": false,
+      "choices": null
+    }
+  ],
+  "description": "Use to create a giveaway."
+}

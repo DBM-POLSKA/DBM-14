@@ -1,0 +1,131 @@
+{
+  "name": "giveaway end",
+  "temp": "",
+  "event-type": "48",
+  "_id": "NDIhx",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "giveaway_id",
+      "interval": "3",
+      "name": "Giveaway End"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "messageObject",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "message",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "host",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "host",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "prize",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "prize",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "winners",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "winners",
+      "name": "Giveaway Info"
+    },
+    {
+      "sourceGiveaway": "byId",
+      "giveawayId": "${tempVars(\"giveaway_id\")}",
+      "info": "channel",
+      "noParticipantsText": "No Participants",
+      "noWinnersYetText": "No Winners Yet",
+      "noWinnersText": "No Winners",
+      "noDescriptionText": "No Description",
+      "endedStatus1Text": "🟢",
+      "endedStatus2Text": "🔴",
+      "storage": "1",
+      "varName": "channel_id",
+      "name": "Giveaway Info"
+    },
+    {
+      "storage": "1",
+      "varName": "message",
+      "type": "all",
+      "searchValue": "",
+      "name": "Remove Buttons and Selects"
+    },
+    {
+      "channel": "103",
+      "varName": "${tempVars(\"channel_id\")}",
+      "message": "${tempVars(\"winners\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${tempVars(\"prize\")}",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "> **Host:** ${tempVars(\"host\")}\n> **Winners:** ${tempVars(\"winners\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "ID: ${tempVars(\"giveaway_id\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "dontReply": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "message",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "call": "1",
+      "name": "Jump to Action"
+    }
+  ]
+}

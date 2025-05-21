@@ -1,0 +1,38 @@
+{
+  "commandsOrder": [null],
+  "eventsOrder": [],
+  "modules": {
+    "discord.js": ["^14.18.0", true],
+    "fstorm": ["^0.1.3", true],
+    "jimp": ["", false],
+    "@discordjs/voice": ["^0.18.0", true],
+    "@discordjs/opus": ["", false],
+    "ffmpeg-static": ["", false],
+    "tweetnacl": ["", false],
+    "youtube-dl-exec": ["", false],
+    "ytdl-core": ["^3.11.5", true],
+    "node-fetch": ["^3.3.2", true]
+  },
+  "client": "",
+  "token": "",
+  "ownerId": "",
+  "allowPrefixSpace": "false",
+  "autoResponseText": "Command successfully run!",
+  "noDescriptionText": "(no description)",
+  "invalidPermissionsText": "Insufficient permits!",
+  "invalidCooldownText": "You must wait %s before using this action.",
+  "invalidButtonText": "The button response is no longer valid.",
+  "invalidSelectText": "The menu response is no longer valid.",
+  "invalidUserText": "Only the user of the command can perform this action.",
+  "Bot Intents": { "customData": { "Bot Intents": { "intents": 131071 } } },
+  "Bot Partials": {
+    "customData": {
+      "Bot Partials": {
+        "partials": ["USER", "GUILD_MEMBER", "MESSAGE", "REACTION", "CHANNEL"]
+      }
+    }
+  },
+  "tag": "!",
+  "Bot Panel": { "customData": { "Bot Panel": {} } },
+  "DBM POLAND": { "customData": { "DBM POLAND": {} } }
+}
