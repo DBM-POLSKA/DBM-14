@@ -32,30 +32,24 @@
 
 (If the download doesn't work, click the "Code" button at the top of the repository and then "Download ZIP")
 
-# Instrukcja 1 (pobieranie modów)
 
-Poniżej masz instrukcję jak pobrać i wgrać mody do swojego bota.
+# Instruction 1 `v13 → v14`
 
-1.  Pobierz pakiet, którego potrzebujesz:
-2.  Na górnym pasku Discord Bot Maker kliknij Project → Open Project Directory (otworzy się folder twojego bota)
-3.  Wyodrębnij zawartość pliku .zip oraz wrzuć mody do odpowiedniego folderu
-    (Zastąp istniejące pliki, jeśli zostaniesz o to poproszony)
-
-Aby zainstalować rozszerzenia, musisz przenieść plik .js z folderu rozszerzeń i umieścić go bezpośrednio w folderze rozszerzeń swojego projektu.
-
-**Będziesz musiał powtórzyć ten proces dla wszystkich swoich projektów**
-
-# Instrukcja 2 (DBM v13 → v14)
-
-Poniżej masz instrukcję jak pobrać/zaktualizować bota z v13 na v14.
-
-1.  Pobierz najnowszą wersję [node.js](https://nodejs.org/en) (np. v22). <img src="https://media.discordapp.net/attachments/1301409004248891443/1352684954798260277/node_js_install.png?ex=67dee988&is=67dd9808&hm=3f3b4d3038477b702fcdb3ddd78ae73dc812a37de0e3cfa3d4416d9c073d46af&=&format=webp&quality=lossless&width=1463&height=822" width="800" alt="DBM POLSKA" />
-2.  Zaktualizuj node.js w DBM, pliki z tąd `C:\Program Files\nodejs` skopiuj tu `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="https://media.discordapp.net/attachments/1301409004248891443/1352685008124510300/node_js_update.png?ex=67dee995&is=67dd9815&hm=744dd85349fcc358c47ea4c6bd478e68a8c9f14f1065b0ec6f906f0d2c6222ab&=&format=webp&quality=lossless&width=1510&height=822" width="800" alt="DBM POLSKA" />
-3.  Wejdź w DBM → Settings → Editor Settings (wyłącz wszystkie opcje oprócz "Allow Action Dialog Resizing"). <img src="https://media.discordapp.net/attachments/1301409004248891443/1352685041339072683/dbm_settings.png?ex=67dee99d&is=67dd981d&hm=228c0b024ebea31cc4f1cc33d67bfc8f4babd3f1c992bb4f74496a31dd2c60d7&=&format=webp&quality=lossless&width=1328&height=692" width="800" alt="DBM POLSKA" />
-4.  Pobierz pakiet "Bot Files". <img src="https://cdn.discordapp.com/attachments/1301409004248891443/1352693442177798354/download_bot_files.gif?ex=67def170&is=67dd9ff0&hm=6d4c703bec3951a614fa5f1e513a9c3b51c5004ae7f53f872d13142f1a582296&" width="800" alt="DBM POLSKA" />
+1.  Download the latest version of [node.js](https://nodejs.org/en) (e.g. v22). <img src="" width="800" alt="DBM POLSKA" />
+2.  Zaktualizuj node.js w DBM, pliki z tąd `C:\Program Files\nodejs` skopiuj tu `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="" width="800" alt="DBM POLSKA" />
+3.  Wejdź w DBM → Settings → Editor Settings (wyłącz wszystkie opcje oprócz "Allow Action Dialog Resizing"). <img src="" width="800" alt="DBM POLSKA" />
+4.  Pobierz pakiet "Bot Files". <img src="" width="800" alt="DBM POLSKA" />
 5.  Wypakuj pobranego bota na pulpicie i otwórz go za pomocą DBM.
 6.  (Opcjonalnie) Możesz także pobrać zaktualizowane pliki programu DBM, Da ci to dostęp do kilku dodatkowych nowych funkcji.
 
 Gotowe! już masz bota na najnowszej wersji discord.js!
 Możesz także zaktualizować już istniejącego bota ale możliwe że będziesz musiał ustawić na nowo dużo rzeczy.
-Potrzebujesz więcej akcji, eventów lub innych dodatków? Cofnij się do "Instrukcja 1".
+
+
+# Instruction 2 `download mods`
+
+1.  Download the package you need.
+2.  In the top bar of Discord Bot Maker, click `Project` → `Open Directory` of your corresponding package (e.g. Open Actions Directory).
+3.  Extract the contents of the .zip file into the folder you just opened (Overwrite existing files if asked).
+
+To install extensions you need to move the .js file from the extension folder and place it directly into the extensions folder for your project.
