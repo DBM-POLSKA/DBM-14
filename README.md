@@ -21,14 +21,14 @@
 
 | Package    |                                                        Download Link                                                         |
 | ---------- | :--------------------------------------------------------------------------------------------------------------------------: |
-| Actions    |  [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https:%2F%2Fgithub.com%2FDBM-POLSKA%2FDBM-14%2Ftree%2FDBM-v14%2Factions)   |
-| Events     |   [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/events) |
-| Extensions | [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/extensions) |
-| Raw Data | [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/raw%20data) |
-| Themes | [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/themes) |
-| Bot Files | [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/bot%20files) |
-| DBM Files | [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/dbm%20files) |
-| Node JS | [Pobierz](https://nodejs.org/en) |
+| Actions    |  [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https:%2F%2Fgithub.com%2FDBM-POLSKA%2FDBM-14%2Ftree%2FDBM-v14%2Factions)   |
+| Events     |   [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/events) |
+| Extensions | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/extensions) |
+| Raw Data | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/raw%20data) |
+| Themes | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/themes) |
+| Bot Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/bot%20files) |
+| DBM Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/dbm%20files) |
+| Node JS | [Download](https://nodejs.org/en) |
 
 # Instrukcja 1 (pobieranie modów)
 
