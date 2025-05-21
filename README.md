@@ -30,6 +30,8 @@
 | DBM Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/dbm%20files) |
 | Node JS | [Download](https://nodejs.org/en) |
 
+(If the download doesn't work, click the "Code" button at the top of the repository and then "Download ZIP")
+
 # Instrukcja 1 (pobieranie modów)
 
 Poniżej masz instrukcję jak pobrać i wgrać mody do swojego bota.
