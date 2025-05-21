@@ -17,9 +17,9 @@
 
 [DBM POLSKA](https://discord.gg/9HYB4n3Dz4) is a community-driven open source project whose goal is to modify, extend, and improve [Discord Bot Maker](https://store.steampowered.com/app/682130/Discord_Bot_Maker/).
 
-# Pobieranie
+# Downloads
 
-| Pakiet    |                                                        Linki Do Pobrania                                                         |
+| Package    |                                                        Download Link                                                         |
 | ---------- | :--------------------------------------------------------------------------------------------------------------------------: |
 | Actions    |  [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https:%2F%2Fgithub.com%2FDBM-POLSKA%2FDBM-14%2Ftree%2FDBM-v14%2Factions)   |
 | Events     |   [Pobierz](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/events) |
