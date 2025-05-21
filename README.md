@@ -35,11 +35,11 @@
 
 # Instruction 1 `v13 → v14`
 
-1.  Download the latest version of [node.js](https://nodejs.org/en) (e.g. v22). <img src="" width="800" alt="DBM POLSKA" />
-2.  Update node.js in DBM, files from here `C:\Program Files\nodejs` copy here `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="" width="800" alt="DBM POLSKA" />
-3.  Go to `DBM` → `Settings` → `Editor Settings` (disable all options except "Allow Action Dialog Resizing"). <img src="" width="800" alt="DBM POLSKA" />
-4.  Download the "Bot Files" package. <img src="" width="800" alt="DBM POLSKA" />
-5.  Extract the downloaded bot on your desktop and open it with DBM.
+1.  Download the latest version of [node.js](https://nodejs.org/en) (e.g. v22). <img src="https://media.discordapp.net/attachments/1301409004248891443/1352684954798260277/node_js_install.png?ex=682e0388&is=682cb208&hm=b7e837b76d183cdc6826b8d6dcb0083e9044dc0fc61071d3669ffd25d7b92f8f&=&format=webp&quality=lossless&width=1491&height=838" width="800" alt="DBM POLSKA" />
+2.  Update node.js in DBM, files from here `C:\Program Files\nodejs` copy here `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="https://media.discordapp.net/attachments/1301409004248891443/1352685008124510300/node_js_update.png?ex=682e0395&is=682cb215&hm=b17a62b34245b75a21188e05f3b626429c775a7917886a010299f7c28d72ed29&=&format=webp&quality=lossless&width=1538&height=838" width="800" alt="DBM POLSKA" />
+3.  Go to `DBM` → `Settings` → `Editor Settings` (disable all options except "Allow Action Dialog Resizing"). <img src="https://media.discordapp.net/attachments/1301409004248891443/1352685041339072683/dbm_settings.png?ex=682e039d&is=682cb21d&hm=7815882c50798d5299b8c1b9574219b7003c954e24af26afd1b70c6f26faf537&=&format=webp&quality=lossless&width=1298&height=677" width="800" alt="DBM POLSKA" />
+4.  Download the "Bot Files" package. <img src="https://media.discordapp.net/attachments/1301409004248891443/1352693442177798354/download_bot_files.gif?ex=682e0b70&is=682cb9f0&hm=f2d032543eca419b97407569f10c3db0535f866ba9a3afec164bbc101aa51959&=&width=1267&height=713" width="800" alt="DBM POLSKA" />
+5.  Extract the downloaded bot on your desktop and open it with DBM. <img src="https://media.discordapp.net/attachments/1301409004248891443/1352711421263347782/unpacking_bot_files.gif?ex=682e1c2e&is=682ccaae&hm=f7f826f1c9d3a0f5b634e35a0f9ab05d77e2b944a13c360bf519fa12138fa193&=&width=660&height=372" width="800" alt="DBM POLSKA" />
 6.  (Optional) You can also download updated DBM program files, This will give you access to some additional new features.
 
 Gotowe! już masz bota na najnowszej wersji discord.js!
