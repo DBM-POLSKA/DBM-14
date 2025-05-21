@@ -21,13 +21,13 @@
 
 | Package    |                                                        Download Link                                                         |
 | ---------- | :--------------------------------------------------------------------------------------------------------------------------: |
-| Actions    |  [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https:%2F%2Fgithub.com%2FDBM-POLSKA%2FDBM-14%2Ftree%2FDBM-v14%2Factions)   |
-| Events     |   [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/events) |
-| Extensions | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/extensions) |
-| Raw Data | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/raw%20data) |
-| Themes | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/themes) |
-| Bot Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/bot%20files) |
-| DBM Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/DBM-v14/dbm%20files) |
+| Actions    |  [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/bot-files/actions)   |
+| Events     |   [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/bot-files/events) |
+| Extensions | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/bot-files/extensions) |
+| Raw Data | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/raw-data) |
+| Themes | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/themes) |
+| Bot Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/bot-files) |
+| DBM Files | [Download](https://dbm-polska.github.io/DBM-DownGit/#/home?url=https://github.com/DBM-POLSKA/DBM-14/tree/main/dbm-files) |
 | Node JS | [Download](https://nodejs.org/en) |
 
 (If the download doesn't work, click the "Code" button at the top of the repository and then "Download ZIP")
