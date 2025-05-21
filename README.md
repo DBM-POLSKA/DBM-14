@@ -36,11 +36,11 @@
 # Instruction 1 `v13 → v14`
 
 1.  Download the latest version of [node.js](https://nodejs.org/en) (e.g. v22). <img src="" width="800" alt="DBM POLSKA" />
-2.  Zaktualizuj node.js w DBM, pliki z tąd `C:\Program Files\nodejs` skopiuj tu `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="" width="800" alt="DBM POLSKA" />
-3.  Wejdź w DBM → Settings → Editor Settings (wyłącz wszystkie opcje oprócz "Allow Action Dialog Resizing"). <img src="" width="800" alt="DBM POLSKA" />
-4.  Pobierz pakiet "Bot Files". <img src="" width="800" alt="DBM POLSKA" />
-5.  Wypakuj pobranego bota na pulpicie i otwórz go za pomocą DBM.
-6.  (Opcjonalnie) Możesz także pobrać zaktualizowane pliki programu DBM, Da ci to dostęp do kilku dodatkowych nowych funkcji.
+2.  Update node.js in DBM, files from here `C:\Program Files\nodejs` copy here `C:\SteamLibrary\steamapps\common\Discord Bot Maker\resources\app\nodejs` <img src="" width="800" alt="DBM POLSKA" />
+3.  Go to `DBM` → `Settings` → `Editor Settings` (disable all options except "Allow Action Dialog Resizing"). <img src="" width="800" alt="DBM POLSKA" />
+4.  Download the "Bot Files" package. <img src="" width="800" alt="DBM POLSKA" />
+5.  Extract the downloaded bot on your desktop and open it with DBM.
+6.  (Optional) You can also download updated DBM program files, This will give you access to some additional new features.
 
 Gotowe! już masz bota na najnowszej wersji discord.js!
 Możesz także zaktualizować już istniejącego bota ale możliwe że będziesz musiał ustawić na nowo dużo rzeczy.
