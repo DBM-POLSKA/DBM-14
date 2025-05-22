@@ -1,6 +1,3 @@
-//---------------------------------------------------------------------
-// Defining global array of intents so they are not repeated later on.
-//---------------------------------------------------------------------
 const INTENTS = [
   "GUILDS",
   "GUILD_MEMBERS",
@@ -19,313 +16,130 @@ const INTENTS = [
   "DIRECT_MESSAGE_REACTIONS",
   "DIRECT_MESSAGE_TYPING",
   "MESSAGE_CONTENT",
+  "GUILD_SCHEDULED_EVENTS",
+  "AUTO_MODERATION_CONFIGURATION",
+  "AUTO_MODERATION_EXECUTION",
+  "DIRECT_MESSAGE_POLLS",
 ];
 
 module.exports = {
-  //---------------------------------------------------------------------
-  // Editor Extension Name
-  //
-  // This is the name of the editor extension displayed in the editor.
-  //---------------------------------------------------------------------
-
   name: "Bot Intents",
-
-  //---------------------------------------------------------------------
-  // Is Command Extension
-  //
-  // Must be true to appear in "command" context menu.
-  // This means each "command" will hold its own copy of this data.
-  //---------------------------------------------------------------------
-
-  //isCommandExtension: true,
-
-  //---------------------------------------------------------------------
-  // Is Event Extension
-  //
-  // Must be true to appear in "event" context menu.
-  // This means each "event" will hold its own copy of this data.
-  //---------------------------------------------------------------------
-
-  //isEventExtension: true,
-
-  //---------------------------------------------------------------------
-  // Is Editor Extension
-  //
-  // Must be true to appear in the main editor context menu.
-  // This means there will only be one copy of this data per project.
-  //---------------------------------------------------------------------
-
   isEditorExtension: true,
-
-  //---------------------------------------------------------------------
-  // Save Button Text
-  //
-  // Customizes the text of the "Save Extension" at the bottom
-  // of the extension window.
-  //---------------------------------------------------------------------
-
   saveButtonText: "Save Intents",
-
-  //---------------------------------------------------------------------
-  // Extension Fields
-  //
-  // These are the fields for the extension. These fields are customized
-  // by creating elements with corresponding Ids in the HTML. These
-  // are also the names of the fields stored in the command's/event's JSON data.
-  //---------------------------------------------------------------------
-
   fields: [],
-
-  //---------------------------------------------------------------------
-  // Default Fields
-  //
-  // The default values of the fields.
-  //---------------------------------------------------------------------
-
-  defaultFields: {
-    intents: -2,
-  },
-
-  //---------------------------------------------------------------------
-  // Extension Dialog Size
-  //
-  // Returns the size of the extension dialog.
-  //---------------------------------------------------------------------
+  defaultFields: { intents: -2 },
 
   size: function () {
-    return { width: 340, height: 575 };
+    return { width: 460, height: 450 };
   },
-
-  //---------------------------------------------------------------------
-  // Extension HTML
-  //
-  // This function returns a string containing the HTML used for
-  // the context menu dialog.
-  //---------------------------------------------------------------------
 
   html: function (data) {
-    if (data.intents === null || data.intents === undefined) {
-      data.intents = -2;
-    }
+    if (data.intents === null || data.intents === undefined) data.intents = -2;
     let intents = data.intents >= 0 ? data.intents : 0;
-    if (data.intents === -1) {
-      intents = 32767;
-    } else if (data.intents === -2) {
-      intents = 32509;
+    if (data.intents === -1)
+      intents = INTENTS.reduce((sum, _, i) => sum | (1 << i), 0);
+    else if (data.intents === -2) {
+      // non-privileged = all except privileged bits (1<<8,1<<1,1<<15)
+      const PRIV = ["GUILD_MEMBERS", "GUILD_PRESENCES", "MESSAGE_CONTENT"];
+      intents = INTENTS.reduce(
+        (sum, name, i) => (PRIV.includes(name) ? sum : sum | (1 << i)),
+        0
+      );
     }
-    return `
-		<div style="padding: 10px 10px 10px 10px;">
-			<input type="radio" id="All" name="RatioButton" value="All" ${
+
+    const labels = {
+      GUILDS: "Server Events",
+      GUILD_MEMBERS: "Server Member Events",
+      GUILD_BANS: "Server Ban Events",
+      GUILD_EMOJIS_AND_STICKERS: "Server Emoji & Sticker Events",
+      GUILD_INTEGRATIONS: "Server Integration Events",
+      GUILD_WEBHOOKS: "Server Webhook Events",
+      GUILD_INVITES: "Server Invite Events",
+      GUILD_VOICE_STATES: "Server Voice Events",
+      GUILD_PRESENCES: "Server Presence Events",
+      GUILD_MESSAGES: "Server Message Events",
+      GUILD_MESSAGE_REACTIONS: "Server Message Reaction Events",
+      GUILD_MESSAGE_TYPING: "Server Typing Events",
+      GUILD_MESSAGE_POLLS: "Server Poll Events",
+      DIRECT_MESSAGES: "Direct Message Events",
+      DIRECT_MESSAGE_REACTIONS: "DM Reaction Events",
+      DIRECT_MESSAGE_TYPING: "DM Typing Events",
+      MESSAGE_CONTENT: "Message Content",
+      GUILD_SCHEDULED_EVENTS: "Server Scheduled Event Events",
+      AUTO_MODERATION_CONFIGURATION: "AutoMod Config Events",
+      AUTO_MODERATION_EXECUTION: "AutoMod Exec Events",
+      DIRECT_MESSAGE_POLLS: "DM Poll Events",
+    };
+
+    let html = `<div style="padding:10px;">
+      <input type="radio" id="All" name="ratio" value="All" ${
         data.intents === -1 ? "checked" : ""
-      }>
-			<label for="All">All Intents ***</label><br>
-
-			<input type="radio" id="NonPrivileged" name="RatioButton" value="NonPrivileged" ${
+      }><label for="All">All Intents</label><br>
+      <input type="radio" id="NonPrivileged" name="ratio" value="NonPrivileged" ${
         data.intents === -2 ? "checked" : ""
-      }>
-			<label for="NonPrivileged">Non-Privileged</label><br>
-
-			<input type="radio" id="Custom" name="RatioButton" value="Custom" ${
+      }><label for="NonPrivileged">Non-Privileged</label><br>
+      <input type="radio" id="Custom" name="ratio" value="Custom" ${
         data.intents >= 0 ? "checked" : ""
-      }>
-			<label for="Custom">Custom</label><br>
+      }><label for="Custom">Custom</label><br>
+      <br><hr><br><div style="column-count:2;">`;
 
-      <br>
-
-			<hr>
-
-      <br>
-
-			<input type="checkbox" id="GUILDS" name="GUILDS" value="GUILDS" ${
-        intents & (1 << 0) ? "checked" : ""
-      }>
-			<label for="GUILDS">Server Events</label><br>
-
-			<input type="checkbox" id="GUILD_MEMBERS" name="GUILD_MEMBERS" value="GUILD_MEMBERS" ${
-        intents & (1 << 1) ? "checked" : ""
-      }>
-			<label for="GUILD_MEMBERS">Server Member Events ***</label><br>
-
-			<input type="checkbox" id="GUILD_BANS" name="GUILD_BANS" value="GUILD_BANS" ${
-        intents & (1 << 2) ? "checked" : ""
-      }>
-			<label for="GUILD_BANS">Server Ban Events</label><br>
-
-			<input type="checkbox" id="GUILD_EMOJIS_AND_STICKERS" name="GUILD_EMOJIS_AND_STICKERS" value="GUILD_EMOJIS_AND_STICKERS" ${
-        intents & (1 << 3) ? "checked" : ""
-      }>
-			<label for="GUILD_EMOJIS_AND_STICKERS">Server Emoji and Stickers Events</label><br>
-
-			<input type="checkbox" id="GUILD_INTEGRATIONS" name="GUILD_INTEGRATIONS" value="GUILD_INTEGRATIONS" ${
-        intents & (1 << 4) ? "checked" : ""
-      }>
-			<label for="GUILD_INTEGRATIONS">Server Integration Events</label><br>
-
-			<input type="checkbox" id="GUILD_WEBHOOKS" name="GUILD_WEBHOOKS" value="GUILD_WEBHOOKS" ${
-        intents & (1 << 5) ? "checked" : ""
-      }>
-			<label for="GUILD_WEBHOOKS">Server Webhook Events</label><br>
-
-			<input type="checkbox" id="GUILD_INVITES" name="GUILD_INVITES" value="GUILD_INVITES" ${
-        intents & (1 << 6) ? "checked" : ""
-      }>
-			<label for="GUILD_INVITES">Server Invite Events</label><br>
-
-			<input type="checkbox" id="GUILD_VOICE_STATES" name="GUILD_VOICE_STATES" value="GUILD_VOICE_STATES" ${
-        intents & (1 << 7) ? "checked" : ""
-      }>
-			<label for="GUILD_VOICE_STATES">Server Voice Events</label><br>
-
-			<input type="checkbox" id="GUILD_PRESENCES" name="GUILD_PRESENCES" value="GUILD_PRESENCES" ${
-        intents & (1 << 8) ? "checked" : ""
-      }>
-			<label for="GUILD_PRESENCES">Server Presence Events ***</label><br>
-
-			<input type="checkbox" id="GUILD_MESSAGES" name="GUILD_MESSAGES" value="GUILD_MESSAGES" ${
-        intents & (1 << 9) ? "checked" : ""
-      }>
-			<label for="GUILD_MESSAGES">Server Message Events</label><br>
-
-			<input type="checkbox" id="GUILD_MESSAGE_REACTIONS" name="GUILD_MESSAGE_REACTIONS" value="GUILD_MESSAGE_REACTIONS" ${
-        intents & (1 << 10) ? "checked" : ""
-      }>
-			<label for="GUILD_MESSAGE_REACTIONS">Server Message Events</label><br>
-
-			<input type="checkbox" id="GUILD_MESSAGE_TYPING" name="GUILD_MESSAGE_TYPING" value="GUILD_MESSAGE_TYPING" ${
-        intents & (1 << 11) ? "checked" : ""
-      }>
-			<label for="GUILD_MESSAGE_TYPING">Server Typing Events</label><br>
-
-      <input type="checkbox" id="GUILD_MESSAGE_POLLS" name="GUILD_MESSAGE_POLLS" value="GUILD_MESSAGE_POLLS" ${
-        intents & (1 << 16) ? "checked" : ""
-      }>
-      <label for="GUILD_MESSAGE_POLLS">Server Poll Events</label><br>
-    
-
-			<input type="checkbox" id="DIRECT_MESSAGES" name="DIRECT_MESSAGES" value="DIRECT_MESSAGES" ${
-        intents & (1 << 12) ? "checked" : ""
-      }>
-			<label for="DIRECT_MESSAGES">Direct Message Events</label><br>
-
-			<input type="checkbox" id="DIRECT_MESSAGE_REACTIONS" name="DIRECT_MESSAGE_REACTIONS" value="DIRECT_MESSAGE_REACTIONS" ${
-        intents & (1 << 13) ? "checked" : ""
-      }>
-			<label for="DIRECT_MESSAGE_REACTIONS">DM Reaction Events</label><br>
-
-			<input type="checkbox" id="DIRECT_MESSAGE_TYPING" name="DIRECT_MESSAGE_TYPING" value="DIRECT_MESSAGE_TYPING" ${
-        intents & (1 << 14) ? "checked" : ""
-      }>
-			<label for="DIRECT_MESSAGE_TYPING">DM Typing Events</label><br>
-
-      <input type="checkbox" id="MESSAGE_CONTENT" name="MESSAGE_CONTENT" value="MESSAGE_CONTENT" ${
-        intents & (1 << 15) ? "checked" : ""
-      }>
-      <label for="MESSAGE_CONTENT">Message Content ***</label><br>
-
-      <br>
-
-			<hr>
-
-      <br>
-
-			<label>*** These require your bot to have them enabled in the developer portal. Furthermore, they can only be enabled if your bot is in less than 100 servers or is whitelisted. If you enable them without turning them on in the portal, your bot will crash!</label>
-		</div>`;
+    INTENTS.forEach((intent, i) => {
+      html += `<input type="checkbox" id="${intent}" value="${intent}" ${
+        intents & (1 << i) ? "checked" : ""
+      }><label for="${intent}">${labels[intent]}</label><br>`;
+    });
+    html += `</div>
+             <br>
+             <hr>
+             <br>
+             <label>These require your bot to have them enabled in the developer portal. Furthermore, they can only be enabled if your bot is in less than 100 servers or is whitelisted. If you enable them without turning them on in the portal, your bot will crash!</label></div>`;
+    return html;
   },
 
-  //---------------------------------------------------------------------
-  // Extension Dialog Init Code
-  //
-  // When the HTML is first applied to the extension dialog, this code
-  // is also run. This helps add modifications or setup reactionary
-  // functions for the DOM elements.
-  //---------------------------------------------------------------------
-
-  init: function (document, globalObject) {
-    const PRIVILEGED = ["GUILD_PRESENCES", "GUILD_MEMBERS", "MESSAGE_CONTENT"];
-    function EnableAll(enable) {
-      for (let i = 0; i < INTENTS.length; i++) {
-        const val = document.getElementById(INTENTS[i]);
-        val.disabled = !enable;
-      }
+  init: function (document) {
+    function setAll(enable) {
+      INTENTS.forEach((name) => {
+        const c = document.getElementById(name);
+        c.disabled = !enable;
+      });
     }
-    document.getElementById("All").onclick = function () {
-      EnableAll(false);
-      for (let i = 0; i < INTENTS.length; i++) {
-        const val = document.getElementById(INTENTS[i]);
-        val.checked = true;
-      }
+    document.getElementById("All").onclick = () => {
+      setAll(false);
+      INTENTS.forEach((n) => (document.getElementById(n).checked = true));
     };
-    document.getElementById("NonPrivileged").onclick = function () {
-      EnableAll(false);
-      for (let i = 0; i < INTENTS.length; i++) {
-        const val = document.getElementById(INTENTS[i]);
-        val.checked = PRIVILEGED.indexOf(INTENTS[i]) === -1;
-      }
+    document.getElementById("NonPrivileged").onclick = () => {
+      setAll(false);
+      const PRIV = ["GUILD_MEMBERS", "GUILD_PRESENCES", "MESSAGE_CONTENT"];
+      INTENTS.forEach(
+        (n) => (document.getElementById(n).checked = !PRIV.includes(n))
+      );
     };
-    document.getElementById("Custom").onclick = function () {
-      EnableAll(true);
-    };
-    if (document.getElementById("All").checked) {
-      document.getElementById("All").onclick();
-    }
-    if (document.getElementById("NonPrivileged").checked) {
-      document.getElementById("NonPrivileged").onclick();
-    }
-    if (document.getElementById("Custom").checked) {
-      document.getElementById("Custom").onclick();
-    }
+    document.getElementById("Custom").onclick = () => setAll(true);
+    // init
+    ["All", "NonPrivileged", "Custom"].forEach((id) => {
+      if (document.getElementById(id).checked)
+        document.getElementById(id).onclick();
+    });
   },
 
-  //---------------------------------------------------------------------
-  // Extension Dialog Close Code
-  //
-  // When the dialog is closed, this is called. Use it to save the data.
-  //---------------------------------------------------------------------
-
-  close: function (document, data, globalObject) {
-    let result = 0;
-    if (document.getElementById("All").checked) {
-      result = -1;
-    } else if (document.getElementById("NonPrivileged").checked) {
-      result = -2;
-    } else {
-      for (let i = 0; i < INTENTS.length; i++) {
-        const val = document.getElementById(INTENTS[i]).checked;
-        if (val) result |= 1 << i;
-      }
-    }
-    data.intents = result;
+  close: function (document, data) {
+    let res = 0;
+    if (document.getElementById("All").checked) res = -1;
+    else if (document.getElementById("NonPrivileged").checked) res = -2;
+    else
+      INTENTS.forEach((n, i) => {
+        if (document.getElementById(n).checked) res |= 1 << i;
+      });
+    data.intents = res;
   },
-
-  //---------------------------------------------------------------------
-  // Editor Extension Bot Mod
-  //
-  // Upon initialization of the bot, this code is run. Using the bot's
-  // DBM namespace, one can add/modify existing functions if necessary.
-  // In order to reduce conflicts between mods, be sure to alias
-  // functions you wish to overwrite.
-  //
-  // This is absolutely necessary for editor extensions since it
-  // allows us to setup modifications for the necessary functions
-  // we want to change.
-  //
-  // The client object can be retrieved from: `const bot = DBM.Bot.bot;`
-  // Classes can be retrieved also using it: `const { Actions, Event } = DBM;`
-  //---------------------------------------------------------------------
 
   mod: function (DBM) {
     DBM.Bot.intents = function () {
-      const intentData = DBM.Files?.data.settings?.["Bot Intents"];
-      const intents = intentData?.customData?.["Bot Intents"]?.intents;
-      if (!intentData || typeof intents === "undefined")
-        return DBM.Bot.NON_PRIVILEGED_INTENTS;
-      if (intents === -1) {
-        return DBM.Bot.ALL_INTENTS;
-      } else if (intents === -2) {
-        return DBM.Bot.NON_PRIVILEGED_INTENTS;
-      } else {
-        return intents;
-      }
+      const d = DBM.Files.data.settings["Bot Intents"];
+      const i = d.customData["Bot Intents"].intents;
+      if (i === -1) return DBM.Bot.ALL_INTENTS;
+      if (i === -2) return DBM.Bot.NON_PRIVILEGED_INTENTS;
+      return i;
     };
   },
 };
