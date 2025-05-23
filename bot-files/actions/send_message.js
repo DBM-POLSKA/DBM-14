@@ -3,7 +3,7 @@ module.exports = {
   // Action Name
   //---------------------------------------------------------------------
 
-  name: "Send Message",
+  name: "Send Message MOD",
   displayName: "Send Message",
 
   //---------------------------------------------------------------------
@@ -81,7 +81,7 @@ module.exports = {
     author: "Shadow",
     authorUrl: "https://github.com/Shadow64gg",
     downloadUrl:
-      "https://github.com/Shadow64gg/DBM-14/blob/DBM-14/actions/send_message.js",
+      "https://github.com/DBM-POLSKA/DBM-14/blob/main/bot-files/actions/send_message.js",
   },
 
   //---------------------------------------------------------------------
@@ -118,6 +118,12 @@ module.exports = {
     "pollDuration",
     "actionDescription",
     "actionDescriptionColor",
+    "allowMentionUsers",
+    "allowMentionRoles",
+    "allowMentionEveryone",
+    "allowMentionCommandUser",
+    "suppressLinkEmbeds",
+    "suppressNotifications",
     "selectMenuOnTop",
   ],
 
@@ -148,7 +154,7 @@ module.exports = {
         href="https://github.com/Shadow64gg/DBM-14"
         target="_blank"
         style="color: #0077ff; text-decoration: none"
-        >3.2</a
+        >3.3</a
       >
     </p>
   </div>
@@ -209,7 +215,7 @@ module.exports = {
 
 <br><br>
 
-<tab-system style="margin-top: 20px;">
+<tab-system style="margin-top: 28px;">
 
 
   <tab label="Message" icon="comment">
@@ -236,7 +242,72 @@ module.exports = {
 
                   <br>
 
-                  <span class="dbminputlabel">Color</span><br>
+                  <span class="dbminputlabel">Color
+                  <help-icon dialogTitle="Embed Colors" dialogWidth="540" dialogHeight="460">
+                  <div style="padding: 16px;">
+                 <div style="background-color:rgba(0, 0, 0, 0.41); border: 2px solid rgba(255, 255, 255, 0.5); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                  <u><b><span style="font-size: 15px;">Custom Colors</span></b></u><br>
+                  <div style="display: flex; gap: 20px;">
+                   <ul style="flex: 1; list-style: none; padding-left: 0; margin: 0;">
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #CC0000; border-radius: 50%; margin-right: 8px;"></span> DarkRed </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #DC143C; border-radius: 50%; margin-right: 8px;"></span> Crimson </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF6347; border-radius: 50%; margin-right: 8px;"></span> Tomato </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF7F50; border-radius: 50%; margin-right: 8px;"></span> Coral </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF4500; border-radius: 50%; margin-right: 8px;"></span> OrangeRed </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF8C00; border-radius: 50%; margin-right: 8px;"></span> DarkOrange </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFA500; border-radius: 50%; margin-right: 8px;"></span> Orange </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFD700; border-radius: 50%; margin-right: 8px;"></span> Gold </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #DAA520; border-radius: 50%; margin-right: 8px;"></span> GoldenRod </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFBF00; border-radius: 50%; margin-right: 8px;"></span> Amber </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFFF00; border-radius: 50%; margin-right: 8px;"></span> Yellow </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color:rgb(255, 255, 156); border-radius: 50%; margin-right: 8px;"></span> LightYellow </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFF700; border-radius: 50%; margin-right: 8px;"></span> Lemon </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color:rgb(255, 255, 173); border-radius: 50%; margin-right: 8px;"></span> Ivory </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #7FFF00; border-radius: 50%; margin-right: 8px;"></span> Chartreuse </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00FF00; border-radius: 50%; margin-right: 8px;"></span> Lime </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #7CFC00; border-radius: 50%; margin-right: 8px;"></span> LawnGreen </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #008000; border-radius: 50%; margin-right: 8px;"></span> Green </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #228B22; border-radius: 50%; margin-right: 8px;"></span> ForestGreen </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #2E8B57; border-radius: 50%; margin-right: 8px;"></span> SeaGreen </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00FF7F; border-radius: 50%; margin-right: 8px;"></span> SpringGreen </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00FA9A; border-radius: 50%; margin-right: 8px;"></span> MediumSpringGreen </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #98FF98; border-radius: 50%; margin-right: 8px;"></span> Mint </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #40E0D0; border-radius: 50%; margin-right: 8px;"></span> Turquoise </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00FFFF; border-radius: 50%; margin-right: 8px;"></span> Aqua </li>
+                   </ul>
+                   <ul style="flex: 1; list-style: none; padding-left: 0; margin: 0;">
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00FFFF; border-radius: 50%; margin-right: 8px;"></span> Cyan </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color:rgb(175, 255, 255); border-radius: 50%; margin-right: 8px;"></span> LightCyan </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #87CEEB; border-radius: 50%; margin-right: 8px;"></span> SkyBlue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #00BFFF; border-radius: 50%; margin-right: 8px;"></span> DeepSkyBlue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #1E90FF; border-radius: 50%; margin-right: 8px;"></span> DodgerBlue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color:rgb(52, 52, 255); border-radius: 50%; margin-right: 8px;"></span> Blue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #0000CD; border-radius: 50%; margin-right: 8px;"></span> MediumBlue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #4169E1; border-radius: 50%; margin-right: 8px;"></span> RoyalBlue </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #000080; border-radius: 50%; margin-right: 8px;"></span> Navy </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #4B0082; border-radius: 50%; margin-right: 8px;"></span> Indigo </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #8A2BE2; border-radius: 50%; margin-right: 8px;"></span> BlueViolet </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #9400D3; border-radius: 50%; margin-right: 8px;"></span> DarkViolet </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #9932CC; border-radius: 50%; margin-right: 8px;"></span> DarkOrchid </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #800080; border-radius: 50%; margin-right: 8px;"></span> Purple </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #9370DB; border-radius: 50%; margin-right: 8px;"></span> MediumPurple </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #EE82EE; border-radius: 50%; margin-right: 8px;"></span> Violet </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #DA70D6; border-radius: 50%; margin-right: 8px;"></span> Orchid </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF00FF; border-radius: 50%; margin-right: 8px;"></span> Fuchsia </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF69B4; border-radius: 50%; margin-right: 8px;"></span> HotPink </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FF1493; border-radius: 50%; margin-right: 8px;"></span> DeepPink </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color:rgb(255, 171, 185); border-radius: 50%; margin-right: 8px;"></span> Pink </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFB6C1; border-radius: 50%; margin-right: 8px;"></span> LightPink </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #DB7093; border-radius: 50%; margin-right: 8px;"></span> PaleVioletRed </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FA8072; border-radius: 50%; margin-right: 8px;"></span> Salmon </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #FFFFFF; border-radius: 50%; margin-right: 8px;"></span> White </li>
+                     <li><span style="display:inline-block; width:10px; height:10px; background-color: #000000; border-radius: 50%; margin-right: 8px;"></span> Black </li>
+                   </ul>
+                  </div>
+                  </div>
+                </div>
+              </help-icon>
+              </span><br>
                   <input id="color" class="round" type="text" placeholder="Leave blank for black...">
                 </div>
 
@@ -649,7 +720,27 @@ module.exports = {
       <br>
 
       <div style="display: flex; justify-content: space-between;">
+        <dbm-checkbox id="allowMentionUsers" label="Allow Mention Users" checked></dbm-checkbox>
+
+        <dbm-checkbox id="allowMentionRoles" label="Allow Mention Roles" checked></dbm-checkbox>
+
+        <dbm-checkbox id="allowMentionEveryone" label="Allow Mention Everyone" checked></dbm-checkbox>
+      </div>
+
+      <br>
+
+      <div style="display: flex; justify-content: space-between;">
+        <dbm-checkbox id="suppressLinkEmbeds" label="Suppress Link Embeds"></dbm-checkbox>
+
         <dbm-checkbox id="selectMenuOnTop" label="Select Menu On Top" checked></dbm-checkbox>
+
+        <dbm-checkbox id="allowMentionCommandUser" label="Ping Command User"></dbm-checkbox>
+      </div>
+
+      <br>
+
+      <div style="display: flex; justify-content: space-between;">
+        <dbm-checkbox id="suppressNotifications" label="Suppress Notifications"></dbm-checkbox>
       </div>
 
       <br>
@@ -849,23 +940,53 @@ module.exports = {
   async action(cache) {
     const data = cache.actions[cache.index];
 
-    //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie wiadomości
-    //---------------------------------------------------------------------
-
-    function message() {
-      const content = this.evalMessage(data.message, cache);
-      return content;
-    }
+    process.on("unhandledRejection", (reason, promise) => {
+      console.error("[Send Message] An error occurred:", reason);
+      this.callNextAction(cache);
+    });
 
     //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie embedów
+    //region Obsługa Ustawień
     //---------------------------------------------------------------------
 
-    function embeds() {
-      const embedBuilders = [];
-      if (!Array.isArray(data.embeds)) return embedBuilders;
+    const settings = {
+      reply: data.reply,
+      ephemeral: data.ephemeral,
+      tts: data.tts,
+      overwrite: data.overwrite,
+      dontSend: data.dontSend,
+      pinned: data.pinned,
+      selectMenuOnTop: data.selectMenuOnTop,
+      suppressLinkEmbeds: data.suppressLinkEmbeds,
+      suppressNotifications: data.suppressNotifications,
+      allowMentionUsers: data.allowMentionUsers,
+      allowMentionRoles: data.allowMentionRoles,
+      allowMentionEveryone: data.allowMentionEveryone,
+      allowMentionCommandUser: data.allowMentionCommandUser,
+    };
+    const interaction =
+      cache.interaction?.__originalInteraction ?? cache.interaction;
+    const channel = parseInt(data.channel, 10);
+    let target = await this.getSendReplyTarget(
+      channel,
+      this.evalMessage(data.varName, cache),
+      cache
+    );
+    let awaitResponses = [];
 
+    //---------------------------------------------------------------------
+    //region Obsługa Wiadomości
+    //---------------------------------------------------------------------
+
+    const messageContent = this.evalMessage(data.message, cache);
+
+    //---------------------------------------------------------------------
+    //region Obsługa Embedów
+    //---------------------------------------------------------------------
+
+    let messageEmbeds = [];
+
+    if (Array.isArray(data.embeds)) {
       const { EmbedBuilder, Colors } = this.getDBM().DiscordJS;
 
       for (const e of data.embeds) {
@@ -878,20 +999,62 @@ module.exports = {
 
         if (e.color) {
           const raw = this.evalMessage(e.color, cache).trim();
-
           const key = raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase();
           let resolved = Colors[key];
 
           const custom = {
-            lavender: "#E6E6FA",
-            salmon: "#FA8072",
-            teal: "#008080",
-            maroon: "#800000",
+            red: "#FF0000",
+            darkRed: "#CC0000",
+            crimson: "#DC143C",
+            tomato: "#FF6347",
+            coral: "#FF7F50",
+            orangeRed: "#FF4500",
+            darkOrange: "#FF8C00",
+            orange: "#FFA500",
+            gold: "#FFD700",
+            goldenRod: "#DAA520",
+            amber: "#FFBF00",
+            yellow: "#FFFF00",
+            lightYellow: "#FFFFE0",
+            lemon: "#FFF700",
+            ivory: "#FFFFF0",
+            chartreuse: "#7FFF00",
+            lime: "#00FF00",
+            lawnGreen: "#7CFC00",
+            green: "#008000",
+            forestGreen: "#228B22",
+            seaGreen: "#2E8B57",
+            springGreen: "#00FF7F",
+            mediumSpringGreen: "#00FA9A",
+            mint: "#98FF98",
+            turquoise: "#40E0D0",
+            aqua: "#00FFFF",
+            cyan: "#00FFFF",
+            lightCyan: "#E0FFFF",
+            skyBlue: "#87CEEB",
+            deepSkyBlue: "#00BFFF",
+            dodgerBlue: "#1E90FF",
+            blue: "#0000FF",
+            mediumBlue: "#0000CD",
+            royalBlue: "#4169E1",
             navy: "#000080",
-            darkblue: "#0000ff",
-            lightpink: "#ff76f1",
-            pink: "#ff00cc",
-            darkpink: "#a80086",
+            indigo: "#4B0082",
+            blueViolet: "#8A2BE2",
+            darkViolet: "#9400D3",
+            darkOrchid: "#9932CC",
+            purple: "#800080",
+            mediumPurple: "#9370DB",
+            violet: "#EE82EE",
+            orchid: "#DA70D6",
+            fuchsia: "#FF00FF",
+            hotPink: "#FF69B4",
+            deepPink: "#FF1493",
+            pink: "#FFC0CB",
+            lightPink: "#FFB6C1",
+            paleVioletRed: "#DB7093",
+            salmon: "#FA8072",
+            white: "#FFFFFF",
+            black: "#000000",
           };
           if (!resolved && custom[raw.toLowerCase()]) {
             resolved = custom[raw.toLowerCase()];
@@ -924,6 +1087,7 @@ module.exports = {
         }
 
         if (e.imageUrl) emb.setImage(this.evalMessage(e.imageUrl, cache));
+
         if (e.thumbUrl) emb.setThumbnail(this.evalMessage(e.thumbUrl, cache));
 
         if (Array.isArray(e.fields)) {
@@ -936,35 +1100,31 @@ module.exports = {
           }
         }
 
-        embedBuilders.push(emb);
+        messageEmbeds.push(emb);
       }
-
-      return embedBuilders;
     }
 
     //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie ankiet
+    //region Obsługa Ankiet
     //---------------------------------------------------------------------
 
-    function polls() {
-      const pollQuestion = this.evalMessage(data.pollQuestion, cache);
-      const pollDuration = this.evalMessage(data.pollDuration, cache) || "24";
-      const pollAllowMultipleAnswers = data.pollAllowMultipleAnswers
-        ? true
-        : false;
+    const pollQuestion = this.evalMessage(data.pollQuestion, cache);
+    const pollDuration = this.evalMessage(data.pollDuration, cache) || "24";
+    const pollAllowMultipleAnswers = data.pollAllowMultipleAnswers
+      ? true
+      : false;
 
-      const pollAnswers = data.pollAnswers.map((answerData) => {
-        return {
-          text: this.evalMessage(answerData.pollAnswer, cache),
-          emoji: this.evalMessage(answerData.pollEmoji, cache) || undefined,
-        };
-      });
-
-      if (!pollQuestion || pollAnswers.length === 0) {
-        return undefined;
-      }
-
+    const pollAnswers = data.pollAnswers.map((answerData) => {
       return {
+        text: this.evalMessage(answerData.pollAnswer, cache),
+        emoji: this.evalMessage(answerData.pollEmoji, cache) || undefined,
+      };
+    });
+
+    let messagePoll = undefined;
+
+    if (pollQuestion && pollAnswers.length > 0) {
+      messagePoll = {
         question: { text: pollQuestion },
         answers: pollAnswers,
         allowMultiselect: pollAllowMultipleAnswers,
@@ -973,16 +1133,15 @@ module.exports = {
     }
 
     //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie przycisków
+    //region Obsługa Przycisków
     //---------------------------------------------------------------------
 
-    function buttons() {
-      const rows = [];
-      const { ButtonBuilder, ButtonStyle, ActionRowBuilder } =
-        this.getDBM().DiscordJS;
+    let messageButtons = [];
 
-      if (!Array.isArray(data.buttons)) return rows;
+    const { ButtonBuilder, ButtonStyle, ActionRowBuilder } =
+      this.getDBM().DiscordJS;
 
+    if (Array.isArray(data.buttons)) {
       let currentRow = new ActionRowBuilder();
 
       for (const b of data.buttons) {
@@ -990,8 +1149,11 @@ module.exports = {
 
         const style = this.evalMessage(b.type, cache);
 
-        if (ButtonStyle[style]) btn.setStyle(ButtonStyle[style]);
-        else btn.setStyle(parseInt(style, 10));
+        if (ButtonStyle[style]) {
+          btn.setStyle(ButtonStyle[style]);
+        } else {
+          btn.setStyle(parseInt(style, 10));
+        }
 
         const label = this.evalMessage(b.name, cache);
         if (label) btn.setLabel(label);
@@ -1007,34 +1169,57 @@ module.exports = {
         }
 
         if (currentRow.components.length >= 5) {
-          rows.push(currentRow);
+          messageButtons.push(currentRow);
           currentRow = new ActionRowBuilder();
         }
+
+        if (Array.isArray(data.buttons)) {
+          for (const b of data.buttons) {
+            const userId =
+              interaction?.user?.id || interaction?.member?.user?.id || null;
+            const id = this.evalMessage(b.id, cache);
+            const mode = b.mode ?? "MULTI";
+            const timeB = b.time
+              ? parseInt(this.evalMessage(b.time, cache), 10)
+              : 60000;
+            if (mode !== "PERSISTENT") {
+              awaitResponses.push({
+                type: "BUTTON",
+                time: timeB,
+                id,
+                user: mode.endsWith("PERSONAL") ? userId : null,
+                multi: mode.startsWith("MULTI"),
+                data: b,
+              });
+            }
+          }
+        }
+
         currentRow.addComponents(btn);
       }
 
-      if (currentRow.components.length > 0) rows.push(currentRow);
-      return rows;
+      if (currentRow.components.length > 0) {
+        messageButtons.push(currentRow);
+      }
     }
 
     //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie select menu
+    //region Obsługa Select Menu
     //---------------------------------------------------------------------
 
-    function selects() {
-      const rows = [];
-      const {
-        StringSelectMenuBuilder,
-        UserSelectMenuBuilder,
-        RoleSelectMenuBuilder,
-        MentionableSelectMenuBuilder,
-        ChannelSelectMenuBuilder,
-        ChannelType,
-        ActionRowBuilder,
-      } = this.getDBM().DiscordJS;
+    let messageSelectMenus = [];
 
-      if (!Array.isArray(data.selectMenus)) return rows;
+    const {
+      StringSelectMenuBuilder,
+      UserSelectMenuBuilder,
+      RoleSelectMenuBuilder,
+      MentionableSelectMenuBuilder,
+      ChannelSelectMenuBuilder,
+      ChannelType,
+    } = this.getDBM().DiscordJS;
 
+    if (Array.isArray(data.selectMenus)) {
+      const userId = cache.interaction?.user?.id;
       let currentRow = new ActionRowBuilder();
 
       for (const menu of data.selectMenus) {
@@ -1057,267 +1242,175 @@ module.exports = {
               .setMaxValues(max);
 
             if (Array.isArray(menu.options)) {
-              const options = menu.options.map((opt) => {
-                return {
-                  label: this.evalMessage(opt.label, cache),
-                  value: this.evalMessage(opt.value, cache),
-                  description: opt.description
-                    ? this.evalMessage(opt.description, cache)
-                    : undefined,
-                  emoji: opt.emoji
-                    ? this.evalMessage(opt.emoji, cache)
-                    : undefined,
-                  default: opt.default === "true",
-                };
-              });
+              const options = menu.options.map((opt) => ({
+                label: this.evalMessage(opt.label, cache),
+                value: this.evalMessage(opt.value, cache),
+                description: opt.description
+                  ? this.evalMessage(opt.description, cache)
+                  : undefined,
+                emoji: opt.emoji
+                  ? this.evalMessage(opt.emoji, cache)
+                  : undefined,
+                default: opt.default === "true",
+              }));
               builder.addOptions(options);
             }
             break;
           }
 
           case "UserSelectMenu":
-            builder = new UserSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max);
+            builder = new UserSelectMenuBuilder();
             break;
-
           case "RoleSelectMenu":
-            builder = new RoleSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max);
+            builder = new RoleSelectMenuBuilder();
             break;
-
           case "MentionableSelectMenu":
-            builder = new MentionableSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max);
+            builder = new MentionableSelectMenuBuilder();
             break;
-
           case "ChannelSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max);
+            builder = new ChannelSelectMenuBuilder();
             break;
-
           case "ChannelTextSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildText);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildText
+            );
             break;
-
           case "ChannelVoiceSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildVoice);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildVoice
+            );
             break;
-
           case "CategorySelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildCategory);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildCategory
+            );
             break;
-
           case "ChannelStageSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildStageVoice);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildStageVoice
+            );
             break;
-
           case "ChannelForumSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildForum);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildForum
+            );
             break;
-
           case "ChannelTextAndVoiceSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildText, ChannelType.GuildVoice);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildText,
+              ChannelType.GuildVoice
+            );
             break;
-
           case "ChannelTextAndCategorySelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildText,
-                ChannelType.GuildCategory
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildText,
+              ChannelType.GuildCategory
+            );
             break;
-
           case "ChannelTextAndStageSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildText,
-                ChannelType.GuildStageVoice
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildText,
+              ChannelType.GuildStageVoice
+            );
             break;
-
           case "ChannelTextAndForumSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildText, ChannelType.GuildForum);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildText,
+              ChannelType.GuildForum
+            );
             break;
-
           case "ChannelVoiceAndCategorySelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildVoice,
-                ChannelType.GuildCategory
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildVoice,
+              ChannelType.GuildCategory
+            );
             break;
-
           case "ChannelVoiceAndStageSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildVoice,
-                ChannelType.GuildStageVoice
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildVoice,
+              ChannelType.GuildStageVoice
+            );
             break;
-
           case "ChannelVoiceAndForumSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(ChannelType.GuildVoice, ChannelType.GuildForum);
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildVoice,
+              ChannelType.GuildForum
+            );
             break;
-
           case "ChannelCategoryAndStageSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildCategory,
-                ChannelType.GuildStageVoice
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildCategory,
+              ChannelType.GuildStageVoice
+            );
             break;
-
           case "ChannelCategoryAndForumSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildCategory,
-                ChannelType.GuildForum
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildCategory,
+              ChannelType.GuildForum
+            );
             break;
-
           case "ChannelStageAndForumSelectMenu":
-            builder = new ChannelSelectMenuBuilder()
-              .setCustomId(customId)
-              .setDisabled(disabled)
-              .setPlaceholder(placeholder)
-              .setMinValues(min)
-              .setMaxValues(max)
-              .addChannelTypes(
-                ChannelType.GuildStageVoice,
-                ChannelType.GuildForum
-              );
+            builder = new ChannelSelectMenuBuilder().addChannelTypes(
+              ChannelType.GuildStageVoice,
+              ChannelType.GuildForum
+            );
             break;
 
           default:
             continue;
         }
 
+        if (builder) {
+          builder
+            .setCustomId(customId)
+            .setDisabled(disabled)
+            .setPlaceholder(placeholder)
+            .setMinValues(min)
+            .setMaxValues(max);
+        }
+
         const componentType = builder.data.type;
         const isSelectMenu = [3, 5, 6, 7, 8].includes(componentType);
 
+        const id = this.evalMessage(menu.id, cache);
+        if (!this.$select) this.$select = {};
+        this.$select[id] = menu;
+
+        const mode = menu.mode ?? "MULTI";
+        const time = menu.time
+          ? parseInt(this.evalMessage(menu.time, cache), 10)
+          : 60000;
+
         if (isSelectMenu) {
           if (currentRow.components.length > 0) {
-            rows.push(currentRow);
+            messageSelectMenus.push(currentRow);
           }
           currentRow = new ActionRowBuilder().addComponents(builder);
-          rows.push(currentRow);
+          messageSelectMenus.push(currentRow);
           currentRow = new ActionRowBuilder();
         } else {
           if (currentRow.components.length >= 5) {
-            rows.push(currentRow);
+            messageSelectMenus.push(currentRow);
             currentRow = new ActionRowBuilder();
           }
           currentRow.addComponents(builder);
         }
       }
 
-      if (currentRow.components.length > 0) rows.push(currentRow);
-      return rows;
+      if (currentRow.components.length > 0) {
+        messageSelectMenus.push(currentRow);
+      }
     }
 
     //---------------------------------------------------------------------
-    // Pobieranie i przekazywanie plików
+    //region Obsługa Plików
     //---------------------------------------------------------------------
 
-    function files() {
-      const out = [];
-      const { basename, AttachmentBuilder } = this.getDBM().DiscordJS;
-      if (!Array.isArray(data.attachments)) return out;
+    let messageFiles = [];
 
+    const { basename, AttachmentBuilder } = this.getDBM().DiscordJS;
+
+    if (Array.isArray(data.attachments)) {
       for (const a of data.attachments) {
         const url = this.evalMessage(a.url, cache);
         if (!url) continue;
@@ -1325,270 +1418,273 @@ module.exports = {
         const name = a.name ? this.evalMessage(a.name, cache) : basename(url);
 
         const attach = new AttachmentBuilder(url, { name });
+
         if (a.spoiler === true || a.spoiler === "true") {
           attach.setSpoiler(true);
         }
 
-        out.push(attach);
+        messageFiles.push(attach);
       }
-      return out;
     }
 
     //---------------------------------------------------------------------
-    // Wysyłanie wiadomości
+    //region Ustawienia Wiadomości
     //---------------------------------------------------------------------
 
-    async function sendMessage(messageContent, messageEmbeds) {
-      const time = parseFloat(this.evalMessage(data.time, cache)) || 60000;
-      const userId = cache.interaction?.user?.id || cache.user?.id;
+    const mentionParse = [];
+    if (settings.allowMentionUsers) mentionParse.push("users");
+    if (settings.allowMentionRoles) mentionParse.push("roles");
+    if (settings.allowMentionEveryone) mentionParse.push("everyone");
+    const replied = !!settings.allowMentionCommandUser;
 
-      const bot = this;
+    const componentButtons = messageButtons;
+    const componentSelects = messageSelectMenus;
+    const finalComponents = settings.selectMenuOnTop
+      ? [...componentSelects, ...componentButtons]
+      : [...componentButtons, ...componentSelects];
 
-      const interaction =
-        cache.interaction ?? cache.msg?.interaction ?? cache.msg;
-      const channel = parseInt(data.channel, 10);
-      const message = data.message;
-      const replyEnabled = data.reply === true || data.reply === "true";
-      const tts = data.tts === true || data.tts === "true";
-      const ephemeral = data.ephemeral === true || data.ephemeral === "true";
-      const dontSend = data.dontSend === true || data.dontSend === "true";
-      const pinned = data.pinned === true || data.pinned === "true";
-      const overwrite = data.overwrite === true || data.overwrite === "true";
-      const selectMenuOnTop =
-        data.selectMenuOnTop === true || data.selectMenuOnTop === "true";
-      if (data.channel === undefined || message === undefined) return;
-      const targetChannel = await this.getSendReplyTarget(
-        channel,
-        this.evalMessage(data.varName, cache),
-        cache
-      );
+    let flags = 0;
+    if (settings.ephemeral === true || settings.ephemeral === "true") {
+      flags |= 64;
+    }
+    if (
+      settings.suppressLinkEmbeds === true ||
+      settings.suppressLinkEmbeds === "true"
+    ) {
+      flags |= 4;
+    }
+    if (
+      settings.suppressNotifications === true ||
+      settings.suppressNotifications === "true"
+    ) {
+      flags |= 4096;
+    }
 
-      if (dontSend) {
-        return;
+    //---------------------------------------------------------------------
+    //region Tworzenie Wiadomości
+    //---------------------------------------------------------------------
+
+    const payload = {
+      content: messageContent,
+      tts: settings.tts,
+      embeds: messageEmbeds,
+      components: finalComponents,
+      files: messageFiles,
+      flags: flags !== 0 ? flags : undefined,
+      ...(messagePoll ? { poll: messagePoll } : {}),
+      allowedMentions: {
+        parse: mentionParse,
+        replied_user: replied,
+      },
+    };
+
+    //---------------------------------------------------------------------
+    //region Wysyłanie wiadomości
+    //---------------------------------------------------------------------
+
+    //-------------------------
+    // Nie Wysyłaj
+    //-------------------------
+
+    if (settings.dontSend) {
+      const varName2 = this.evalMessage(data.varName2, cache);
+      const storage = parseInt(data.storage, 10);
+      this.storeValue(payload, storage, varName2, cache);
+      this.callNextAction(cache);
+      return;
+    }
+
+    //-------------------------
+    // Edytuj Wiadomość
+    //-------------------------
+
+    let isEdit = 0;
+
+    if (data.editMessage === "intUpdate") {
+      if (interaction && typeof interaction.update === "function") {
+        target = interaction;
+        isEdit = 2;
       }
-
-      const awaitResponses = [];
-
-      if (Array.isArray(data.buttons)) {
-        for (const b of data.buttons) {
-          const id = this.evalMessage(b.id, cache);
-          const mode = b.mode ?? "MULTI";
-          const timeB = b.time
-            ? parseInt(this.evalMessage(b.time, cache), 10) || time
-            : time;
-          if (mode !== "PERSISTENT") {
-            awaitResponses.push({
-              type: "BUTTON",
-              time: timeB,
-              id,
-              user: mode.endsWith("PERSONAL") ? userId : null,
-              multi: mode.startsWith("MULTI"),
-              data: b,
-            });
-          }
+    } else {
+      const editMessage = parseInt(data.editMessage, 10);
+      if (!isNaN(editMessage) && editMessage >= 0) {
+        const editVarName = this.evalMessage(data.editMessageVarName, cache);
+        const editObject = this.getVariable(editMessage, editVarName, cache);
+        const { Message } = this.getDBM().DiscordJS;
+        if (editObject instanceof Message) {
+          target = editObject;
+          isEdit = 1;
         }
       }
+    }
 
-      if (Array.isArray(data.selectMenus)) {
-        for (const s of data.selectMenus) {
-          const id = this.evalMessage(s.id, cache);
-          const mode = s.mode ?? "MULTI";
-          const timeS = s.time
-            ? parseInt(this.evalMessage(s.time, cache), 10) || time
-            : time;
-          if (mode !== "PERSISTENT") {
-            awaitResponses.push({
-              type: "SELECT",
-              time: timeS,
-              id,
-              user: mode.endsWith("PERSONAL") ? userId : null,
-              multi: mode.startsWith("MULTI"),
-              data: s,
-            });
-          }
-        }
-      }
+    const overwrite = settings.overwrite;
 
-      const buttonsArray = buttons.call(this);
-      const selectsArray = selects.call(this);
-      const filesArray = files.call(this);
-      const pollData = polls.call(this);
+    const buildMergedPayload = (original, incoming) => {
+      return {
+        content: [original.content, incoming.content]
+          .filter(Boolean)
+          .join("\n"),
+        embeds: [...(original.embeds || []), ...(incoming.embeds || [])],
+        components: [
+          ...(original.components || []),
+          ...(incoming.components || []),
+        ],
+        files: [
+          ...(original.attachments?.values?.() || []),
+          ...(incoming.files || []),
+        ],
+      };
+    };
 
-      const componentsArray = selectMenuOnTop
-        ? [...selectsArray, ...buttonsArray]
-        : [...buttonsArray, ...selectsArray];
+    const storeAndNext = (msg) => {
+      const varName2 = this.evalMessage(data.varName2, cache);
+      const storage = parseInt(data.storage, 10);
+      this.storeValue(msg, storage, varName2, cache);
+      this.callNextAction(cache);
+    };
 
-      const payload = {
-        content: messageContent,
-        tts: tts,
-        embeds: messageEmbeds,
-        components: componentsArray,
-        files: filesArray,
-        flags: ephemeral === true || ephemeral === "true" ? 64 : undefined,
-        ...(pollData ? { poll: pollData } : {}),
+    if (isEdit === 1 && typeof target.edit === "function") {
+      const finalPayload = overwrite
+        ? payload
+        : buildMergedPayload(target, payload);
+      target.edit(finalPayload).then(storeAndNext).catch(console.error);
+    } else if (isEdit === 2 && typeof target.update === "function") {
+      const finalPayload = overwrite
+        ? payload
+        : buildMergedPayload(target.message, payload);
+      target.update(finalPayload).then(storeAndNext).catch(console.error);
+    } else {
+      //-------------------------
+      // Wyślij Wiadomość
+      //-------------------------
+
+      const varName2 = this.evalMessage(data.varName2, cache);
+      const storage = parseInt(data.storage, 10);
+
+      const sendOrReply = (msgPromise) => {
+        const userId =
+          interaction?.user?.id || interaction?.member?.user?.id || null;
+
+        msgPromise
+          .then((msg) => {
+            const storeAndNext = () => {
+              if (Array.isArray(data.selectMenus)) {
+                for (const s of data.selectMenus) {
+                  const id = this.evalMessage(s.id, cache);
+                  this.$select ??= {};
+                  this.$select[id] = s;
+
+                  const mode = s.mode ?? "MULTI";
+                  const timeS = s.time
+                    ? parseInt(this.evalMessage(s.time, cache), 10)
+                    : 60000;
+
+                  if (mode !== "PERSISTENT") {
+                    this.registerTemporaryInteraction(
+                      msg.id,
+                      timeS,
+                      id,
+                      mode.endsWith("PERSONAL") ? userId : null,
+                      mode.startsWith("MULTI"),
+                      (interaction) => {
+                        interaction.__originalInteraction || cache.interaction;
+                        this.preformActionsFromSelectInteraction(
+                          interaction,
+                          s,
+                          cache.meta,
+                          cache.temp
+                        );
+                      }
+                    );
+                  }
+                }
+              }
+
+              if (Array.isArray(data.buttons)) {
+                for (const b of data.buttons) {
+                  const id = this.evalMessage(b.id, cache);
+                  const mode = b.mode ?? "MULTI";
+                  const timeB = b.time
+                    ? parseInt(this.evalMessage(b.time, cache), 10)
+                    : 60000;
+
+                  if (mode !== "PERSISTENT") {
+                    this.registerTemporaryInteraction(
+                      msg.id,
+                      timeB,
+                      id,
+                      mode.endsWith("PERSONAL") ? userId : null,
+                      mode.startsWith("MULTI"),
+                      (interaction) => {
+                        interaction.__originalInteraction || cache.interaction;
+                        this.preformActionsFromInteraction(
+                          interaction,
+                          b,
+                          cache.meta,
+                          cache.temp
+                        );
+                      }
+                    );
+                  }
+                }
+              }
+
+              this.storeValue(msg, storage, varName2, cache);
+              this.callNextAction(cache);
+            };
+
+            if (settings.pinned && typeof msg.pin === "function") {
+              msg
+                .pin()
+                .then(storeAndNext)
+                .catch((err) => {
+                  console.error("[Send Message] Message pinning error:", err);
+                  storeAndNext();
+                });
+            } else {
+              storeAndNext();
+            }
+          })
+          .catch((err) => {
+            console.error("[Send Message] Error sending message:", err);
+            this.callNextAction(cache);
+          });
       };
 
-      let sentMessage;
+      const shouldReply =
+        settings.reply === true &&
+        ((interaction &&
+          typeof interaction.reply === "function" &&
+          !interaction.replied &&
+          !interaction.deferred &&
+          data.channel === "0") ||
+          (cache.msg && typeof cache.msg.reply === "function"));
 
-      let isEdit = 0;
-      let target;
-      let messageOptions;
-
-      const editMessageOption = this.evalMessage(data.editMessage, cache);
-      if (editMessageOption === "intUpdate") {
-        isEdit = 2;
-      } else {
-        const editMessage = parseInt(editMessageOption, 10);
-        if (typeof editMessage === "number" && editMessage >= 0) {
-          const editVarName = this.evalMessage(data.editMessageVarName, cache);
-          const editObject = this.getVariable(editMessage, editVarName, cache);
-          const { Message } = this.getDBM().DiscordJS;
-          if (editObject) {
-            if (editObject instanceof Message) {
-              target = editObject;
-              isEdit = 1;
-            } else {
-              messageOptions = editObject;
-            }
-          }
+      if (shouldReply) {
+        if (interaction && typeof interaction.reply === "function") {
+          sendOrReply(
+            interaction.reply(payload).then(() => interaction.fetchReply())
+          );
+        } else if (cache.msg && typeof cache.msg.reply === "function") {
+          sendOrReply(cache.msg.reply(payload));
         }
-      }
-
-      const isSame = parseInt(data.channel, 10) === 0;
-
-      try {
-        if (isEdit === 2 && interaction?.update) {
-          if (overwrite) {
-            await interaction.update(payload);
-          } else {
-            const original = await interaction.message.fetch();
-            await interaction.update({
-              content: payload.content || original.content,
-              embeds: [...(original.embeds || []), ...(payload.embeds || [])],
-              components: [
-                ...(original.components || []),
-                ...(payload.components || []),
-              ],
-              files: [
-                ...(original.attachments?.map((a) => ({ attachment: a.url })) ??
-                  []),
-                ...(payload.files || []),
-              ],
-            });
-          }
-          sentMessage = await interaction.fetchReply();
-        } else if (isEdit === 1 && target?.edit) {
-          if (overwrite) {
-            await target.edit(payload);
-          } else {
-            const original = (await target.fetch?.()) ?? target;
-            await target.edit({
-              content: payload.content || original.content,
-              embeds: [...(original.embeds || []), ...(payload.embeds || [])],
-              components: [
-                ...(original.components || []),
-                ...(payload.components || []),
-              ],
-              files: [
-                ...(original.attachments?.map((a) => ({ attachment: a.url })) ??
-                  []),
-                ...(payload.files || []),
-              ],
-            });
-          }
-          sentMessage = target;
-        } else {
-          if (
-            isSame &&
-            replyEnabled &&
-            typeof interaction?.reply === "function" &&
-            !interaction.replied &&
-            !interaction.deferred
-          ) {
-            sentMessage = await interaction.reply({
+      } else {
+        if (interaction && interaction.replied && settings.reply) {
+          sendOrReply(
+            interaction.followUp({
               ...payload,
-              withResponse: true,
-            });
-          } else {
-            sentMessage = await targetChannel.send(payload);
-          }
-        }
-      } catch (err) {
-        if (err.code === 10062) {
-          console.warn("[Send Message] Reply expired, fallback to send");
-          sentMessage = await targetChannel.send(payload);
+            })
+          );
         } else {
-          throw err;
+          sendOrReply(target.send(payload));
         }
-      }
-
-      const multi = true;
-
-      const allComponents = [...buttonsArray, ...selectsArray];
-
-      for (let i = 0; i < awaitResponses.length; i++) {
-        const response = awaitResponses[i];
-        this.registerTemporaryInteraction(
-          sentMessage.id,
-          response.time,
-          response.id,
-          response.user,
-          response.multi,
-          (interaction) => {
-            interaction.__originalInteraction = cache.interaction;
-            if (response.type === "BUTTON") {
-              this.preformActionsFromInteraction(
-                interaction,
-                response.data,
-                cache.meta,
-                cache.temp
-              );
-            } else {
-              this.preformActionsFromSelectInteraction(
-                interaction,
-                response.data,
-                cache.meta,
-                cache.temp
-              );
-            }
-          }
-        );
-      }
-
-      if (interaction && typeof interaction.fetchReply === "function") {
-        sentMessage = await interaction.fetchReply();
-      } else if (cache.msg && typeof cache.msg.channel?.send === "function") {
-        sentMessage = cache.msg;
-      } else {
-        console.warn("[Send Message] No messages to process.");
-      }
-
-      if (sentMessage) {
-        if (pinned && !ephemeral) {
-          try {
-            await sentMessage.pin();
-          } catch (e) {
-            console.warn("[Send Message] Error pinning message:", e);
-          }
-        }
-
-        const varName2 = this.evalMessage(data.varName2, cache);
-        const storage = parseInt(data.storage, 10);
-        this.storeValue(sentMessage, storage, varName2, cache);
-      } else {
-        console.warn("[Send Message] No message object to save.");
       }
     }
 
     //---------------------------------------------------------------------
-    // Dalszy kod
+    //region Koniec
     //---------------------------------------------------------------------
-
-    const msgContent = message.call(this);
-    const msgEmbeds = embeds.call(this);
-    await sendMessage.call(this, msgContent, msgEmbeds);
-
-    this.callNextAction(cache);
   },
 
   //---------------------------------------------------------------------
