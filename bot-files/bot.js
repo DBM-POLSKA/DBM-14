@@ -1167,8 +1167,8 @@ Bot.onInteraction = function (interaction) {
   }
   if (!Actions.checkTemporaryInteractionResponses(interaction)) {
     if (interaction.isButton()) return this.onButtonInteraction(interaction);
-    if (interaction.isStringSelectMenu())
-      return this.onSelectMenuInteraction(interaction);
+    else interaction.isStringSelectMenu();
+    return this.onSelectMenuInteraction(interaction);
   }
 };
 
